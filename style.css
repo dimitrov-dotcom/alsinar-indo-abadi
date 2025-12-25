@@ -124,26 +124,6 @@ footer{
   font-size:13px;
 }
 
-/* ================= FLOATING WHATSAPP ================= */
-.wa-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 10px rgba(0,0,0,0.3);
-  z-index:999;
-  animation:pulse 1.6s infinite;
-}
-
-.wa-float img{
-  width:28px;
-}
 
 /* ================= ANIMATION ================= */
 @keyframes pulse{
@@ -201,7 +181,7 @@ footer{
   margin: 0 auto 40px;
   color: #555;
 }
-
+/* ================= GALERI ================= */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -210,19 +190,60 @@ footer{
   margin: auto;
 }
 
-.gallery-item {
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 6px 16px rgba(0,0,0,.08);
-}
-
-.gallery-item img {
+.gallery-grid img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: 0.4s;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.4s;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
 }
 
-.gallery-item img:hover {
+.gallery-grid img:hover {
   transform: scale(1.08);
+}
+
+/* ================= LIGHTBOX ================= */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+
+/* ================= FLOATING WHATSAPP ================= */
+.wa-float {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  transition: transform .3s;
+}
+
+.wa-float:hover {
+  transform: scale(1.1);
+}
+
+.wa-icon {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
 }

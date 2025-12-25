@@ -67,32 +67,19 @@
   </p>
 
   <div class="gallery-grid">
-
-    <div class="gallery-item">
-      <img src="images/project001.jpg" alt="Layanan Proyek 1">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/project002.jpg" alt="Layanan Proyek 2">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/project003.jpg" alt="Layanan Proyek 3">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/project004.jpg" alt="Layanan Proyek 4">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/project005.jpg" alt="Layanan Proyek 5">
-    </div>
-
-    <div class="gallery-item">
-      <img src="images/project006.jpg" alt="Layanan Proyek 6">
-    </div>
-
-  </div>
+    <img src="images/project001.jpg" onclick="openImg(this.src)" alt="Proyek 1">
+    <img src="images/project002.jpg" onclick="openImg(this.src)" alt="Proyek 2">
+    <img src="images/project003.jpg" onclick="openImg(this.src)" alt="Proyek 3">
+    <img src="images/project004.jpg" onclick="openImg(this.src)" alt="Proyek 4">
+    <img src="images/project005.jpg" onclick="openImg(this.src)" alt="Proyek 5">
+    <img src="images/project006.jpg" onclick="openImg(this.src)" alt="Proyek 6">
+ </div>
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeImg()">
+  <img id="lightbox-img">
+</div>
+</div>
+</div>
 </section>
 <!-- ================= FOOTER ================= -->
 <footer>
@@ -109,6 +96,15 @@
 <script>
 function toggleMenu(){
   document.getElementById("navMenu").classList.toggle("show");
+}
+
+function openImg(src){
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImg(){
+  document.getElementById("lightbox").style.display = "none";
 }
 </script>
 
