@@ -13,18 +13,20 @@ body{
 }
 
 /* ================= NAVBAR ================= */
+
 .navbar{
-  background:#000000;
-  color:#ffffff;
-  padding:14px 28px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-  border-bottom:1px solid #222;
+  background: #ffffff;      /* PUTIH */
+  color: #111;              /* teks gelap */
+  padding: 14px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .logo{
@@ -34,7 +36,7 @@ body{
 
 .logo img{
   height:32px;
-  filter:brightness(0) invert(1);
+  filter:none;
 }
 
 .menu{
@@ -42,15 +44,14 @@ body{
 }
 
 .menu a{
-  color:#ffffff;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:14px;
-  font-weight:500;
+  color: #111;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 20px;
 }
 
 .menu a:hover{
-  color:#25D366;
+  color: #0b2e59;
 }
 
 .hamburger{
