@@ -304,7 +304,8 @@ footer{
 /* ===== HERO SLIDER ===== */
 .hero-slider{
   position: relative;
-  height: 70vh;
+  margin-top: 64px;   /* tinggi navbar */
+  height: calc(100vh - 64px);
   overflow: hidden;
 }
 
@@ -370,4 +371,18 @@ footer{
   .nav-logo{
     height: 36px;
   }
+}
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #000;
+  padding: 10px 20px;
+  z-index: 1000;
 }
