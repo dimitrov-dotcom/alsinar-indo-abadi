@@ -68,3 +68,38 @@ function sendWhatsApp(){
     "_blank"
   );
 }
+(function(){
+  emailjs.init("QL_rniDaaPgnXr_cc");
+})();
+
+document.getElementById("contactForm").addEventListener("submit", function(e){
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const pesan = document.getElementById("pesan").value.trim();
+
+  if(nama === "" || email === "" || pesan === ""){
+    alert("Semua field wajib diisi!");
+    return;
+  }
+
+  emailjs.send(
+    "SERVICE_ID_KAMU",
+    "TEMPLATE_ID_KAMU",
+    {
+      from_name: nama,
+      from_email: email,
+      message: pesan
+    }
+  ).then(
+    function(){
+      alert("Pesan berhasil dikirim!");
+      document.getElementById("contactForm").reset();
+    },
+    function(error){
+      alert("Gagal mengirim pesan");
+      console.log(error);
+    }
+  );
+});
