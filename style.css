@@ -247,3 +247,14 @@ footer{
   height: 28px;
   fill: #fff;
 }
+/* ================= ANIMASI TEKS ================= */
+.fade-up{
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all .6s ease;
+}
+
+.fade-up.show{
+  opacity: 1;
+  transform: translateY(0);
+}
