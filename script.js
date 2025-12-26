@@ -50,3 +50,21 @@ window.addEventListener("scroll", () => {
     navbar.classList.remove("scrolled");
   }
 });
+function sendWhatsApp(){
+  const nama  = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+  const telp  = document.getElementById("telp").value;
+  const pesan = document.getElementById("pesan").value;
+
+  const text = 
+    `Halo PT. ALSINAR INDO ABADI,%0A%0A` +
+    `Nama: ${nama}%0A` +
+    `Email: ${email}%0A` +
+    `WhatsApp: ${telp}%0A%0A` +
+    `Pesan:%0A${pesan}`;
+
+  window.open(
+    `https://wa.me/628123456789?text=${text}`,
+    "_blank"
+  );
+}

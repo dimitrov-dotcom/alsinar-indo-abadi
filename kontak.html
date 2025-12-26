@@ -32,41 +32,37 @@ fetch("./navbar.html")
 
 l<!-- ================= CONTENT ================= -->
 
-<section class="contact-section">
-  <h2 class="section-title fade-up">Hubungi Kami</h2>
+<section class="contact-form-section">
+  <h2 class="section-title fade-up">Kirim Pesan</h2>
   <p class="section-subtitle fade-up">
-    Kami siap membantu kebutuhan bisnis dan proyek Anda
+    Silakan isi form di bawah ini, kami akan segera menghubungi Anda
   </p>
 
-  <div class="contact-grid">
-
-    <!-- CARD INFO -->
-    <div class="contact-card fade-up">
-      <h3>PT. ALSINAR INDO ABADI</h3>
-
-      <p><strong>Email</strong><br>
-      info@alsinarindoabadi.com</p>
-
-      <p><strong>Telepon / WhatsApp</strong><br>
-      0812-3456-789</p>
-
-      <p><strong>Alamat</strong><br>
-      Indonesia</p>
-
-      <a href="https://wa.me/628123456789" class="contact-btn">
-        Hubungi via WhatsApp
-      </a>
+  <form class="contact-form fade-up" onsubmit="sendWhatsApp(); return false;">
+    <div class="form-group">
+      <label>Nama Lengkap</label>
+      <input type="text" id="nama" placeholder="Nama Anda" required>
     </div>
 
-    <!-- MAP -->
-    <div class="contact-map fade-up">
-      <iframe
-        src="https://maps.google.com/maps?q=Indonesia&t=&z=4&ie=UTF8&iwloc=&output=embed"
-        loading="lazy">
-      </iframe>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Email aktif" required>
     </div>
 
-  </div>
+    <div class="form-group">
+      <label>No. WhatsApp</label>
+      <input type="tel" id="telp" placeholder="08xxxxxxxxxx" required>
+    </div>
+
+    <div class="form-group">
+      <label>Pesan</label>
+      <textarea id="pesan" rows="4" placeholder="Tuliskan kebutuhan Anda..." required></textarea>
+    </div>
+
+    <button type="submit" class="form-btn">
+      Kirim via WhatsApp
+    </button>
+  </form>
 </section>
 
 <!-- ================= FOOTER ================= -->
