@@ -7,54 +7,64 @@
 
   <!-- SEO -->
   <meta name="description" content="PT Alsinar Indo Abadi adalah perusahaan General Supplier & Contractor terpercaya di Indonesia.">
-  <meta name="keywords" content="General Supplier, Kontraktor, Scrap Iron">
+  <meta name="keywords" content="General Supplier, Kontraktor, Scrap Iron, Supplier Industri">
   <meta name="author" content="PT Alsinar Indo Abadi">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="PT Alsinar Indo Abadi">
-  <meta property="og:description" content="General Supplier & Contractor Terpercaya">
-  <meta property="og:type" content="website">
+  <!-- Schema Company -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PT Alsinar Indo Abadi",
+    "url": "https://alsinarindoabadi.com",
+    "logo": "https://alsinarindoabadi.com/images/LOGOALSINAR.png",
+    "email": "info@alsinar.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "ID"
+    }
+  }
+  </script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<header class="nav">
-  <div class="brand">
-    <img src="images/LOGOALSINAR.png" class="nav-logo" alt="Logo">
-    <span>PT ALSINAR INDO ABADI</span>
+<div id="navbar"></div>
+<script>
+fetch("./navbar.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+</script>
+
+<!-- ================= HERO PREMIUM ================= -->
+<section class="hero hero-premium">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <img src="images/LOGOALSINAR.png" class="hero-logo" alt="PT Alsinar Indo Abadi">
+    <h1>PT ALSINAR INDO ABADI</h1>
+    <p class="hero-tagline">
+      Mitra Profesional General Supplier & Contractor
+    </p>
+
+    <div class="hero-actions">
+      <a href="kontak.html" class="btn">Hubungi Kami</a>
+      <a href="layanan.html" class="btn outline light">Lihat Layanan</a>
+    </div>
   </div>
-
-  <nav>
-    <ul id="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Layanan</a></li>
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#gallery">Galeri</a></li>
-      <li><a href="#contact">Kontak</a></li>
-    </ul>
-  </nav>
-
-  <div class="lang-switch">
-    <button class="lang-btn">🇮🇩</button>
-    <button class="lang-btn">🇬🇧</button>
-  </div>
-</header>
-
-<!-- ================= HERO ================= -->
-<section id="home" class="hero">
-  <img src="images/LOGOALSINAR.png" class="hero-logo" alt="Logo">
-  <h1>PT ALSINAR INDO ABADI</h1>
-  <p>General Supplier & Contractor Terpercaya</p>
-  <a href="#contact" class="cta">Hubungi Kami</a>
 </section>
 
-<!-- ================= SERVICES ================= -->
-<section id="services" class="section">
+<!-- ================= LAYANAN RINGKAS ================= -->
+<section class="section">
   <div class="container">
-    <h2 class="center">Layanan Kami</h2>
+    <h2 class="center">Layanan Utama</h2>
+    <p class="center" style="margin-top:10px;color:#64748b">
+      Solusi profesional untuk mendukung kebutuhan bisnis Anda
+    </p>
 
     <div class="services-grid">
 
@@ -64,7 +74,7 @@
             <h3>General Supplier</h3>
           </div>
           <div class="flip-back">
-            <p>Penyediaan material industri berkualitas.</p>
+            <p>Pengadaan material dan kebutuhan industri berkualitas tinggi.</p>
           </div>
         </div>
       </div>
@@ -72,10 +82,10 @@
       <div class="flip-card service-card">
         <div class="flip-inner">
           <div class="flip-front">
-            <h3>Manajemen Scrap Iron</h3>
+            <h3>Konstruksi & Kontraktor</h3>
           </div>
           <div class="flip-back">
-            <p>Pengelolaan besi tua profesional & aman.</p>
+            <p>Pelaksanaan proyek konstruksi profesional dan tepat waktu.</p>
           </div>
         </div>
       </div>
@@ -83,176 +93,171 @@
       <div class="flip-card service-card">
         <div class="flip-inner">
           <div class="flip-front">
-            <h3>Kontraktor & Konstruksi</h3>
+            <h3>Pengelolaan Scrap Besi</h3>
           </div>
           <div class="flip-back">
-            <p>Pekerjaan konstruksi berkualitas tinggi.</p>
+            <p>Manajemen besi tua industri yang aman dan bernilai ekonomis.</p>
           </div>
         </div>
       </div>
 
     </div>
+
+    <div class="center" style="margin-top:40px">
+      <a href="layanan.html" class="btn outline">Detail Layanan</a>
+    </div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section about-pro">
+<!-- ================= KEUNGGULAN ================= -->
+<section class="section alt">
   <div class="container">
+    <h2 class="center">Mengapa Memilih Kami</h2>
 
-    <div class="about-header">
-      <h2>Tentang Perusahaan</h2>
-      <p class="about-lead">
-        PT Alsinar Indo Abadi adalah perusahaan General Supplier dan Contractor
-        yang berkomitmen pada kualitas, profesionalisme, dan kepercayaan klien.
-      </p>
-    </div>
+    <div class="trust-grid">
 
-    <div class="vm-grid">
-
-      <div class="flip-card vm-card vision">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <h3>Visi</h3>
-            <p>Tujuan jangka panjang</p>
-          </div>
-          <div class="flip-back">
-            <p>Menjadi perusahaan supplier dan kontraktor terkemuka di Indonesia.</p>
-          </div>
-        </div>
+      <div class="trust-item">
+        <strong>Profesional & Berpengalaman</strong>
+        <p>Didukung tim kompeten dan berpengalaman di bidangnya.</p>
       </div>
 
-      <div class="flip-card vm-card mission">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <h3>Misi</h3>
-            <p>Komitmen perusahaan</p>
-          </div>
-          <div class="flip-back">
-            <ul>
-              <li>Layanan profesional</li>
-              <li>Kepuasan klien</li>
-              <li>Keselamatan kerja</li>
-              <li>Keberlanjutan</li>
-            </ul>
-          </div>
-        </div>
+      <div class="trust-item">
+        <strong>Legal & Terpercaya</strong>
+        <p>Berbadan usaha resmi dan beroperasi sesuai regulasi.</p>
+      </div>
+
+      <div class="trust-item">
+        <strong>Tepat Waktu</strong>
+        <p>Komitmen pada kualitas dan ketepatan penyelesaian pekerjaan.</p>
+      </div>
+
+      <div class="trust-item">
+        <strong>Kerja Sama Jangka Panjang</strong>
+        <p>Membangun kemitraan strategis berkelanjutan.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ================= GALLERY ================= -->
-<section id="gallery" class="section alt">
+<!-- ================= CLIENT LOGO ================= -->
+<section class="section client-section">
   <div class="container">
-    <h2 class="center">Galeri Proyek</h2>
+    <h2 class="center">Klien & Mitra</h2>
+    <p class="center client-subtitle">
+      Dipercaya oleh berbagai perusahaan dan mitra bisnis
+    </p>
 
-    <div class="gallery-wrapper">
-      <button class="gallery-btn prev">&#10094;</button>
+    <div class="client-slider">
+      <div class="client-track">
+        <img src="images/clients/client1.png">
+        <img src="images/clients/client2.png">
+        <img src="images/clients/client3.png">
+        <img src="images/clients/client4.png">
+        <img src="images/clients/client5.png">
 
-      <div class="gallery-slider">
-        <div class="gallery-track">
-          <img src="images/gallery/proyek1.jpg">
-          <img src="images/gallery/proyek2.jpg">
-          <img src="images/gallery/proyek3.jpg">
-          <img src="images/gallery/proyek4.jpg">
-        </div>
+        <img src="images/clients/client1.png">
+        <img src="images/clients/client2.png">
+        <img src="images/clients/client3.png">
+        <img src="images/clients/client4.png">
+        <img src="images/clients/client5.png">
       </div>
-
-      <button class="gallery-btn next">&#10095;</button>
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="section alt center">
-  <div class="container narrow">
-    <h2>Kontak Kami</h2>
-    <p>Siap menjadi mitra strategis bisnis Anda.</p>
+<!-- ================= TESTIMONI ================= -->
+<section class="section alt testimonial-section">
+  <div class="container">
+    <h2 class="center">Testimoni Klien</h2>
+    <p class="center testimonial-subtitle">
+      Kepercayaan klien adalah prioritas utama kami
+    </p>
 
-    <div class="contact-actions">
-      <a href="https://wa.me/6281346860886" class="btn">WhatsApp</a>
-      <a href="mailto:info@alsinar.com" class="btn outline">Email</a>
+    <div class="testimonial-grid">
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          “PT Alsinar Indo Abadi menunjukkan profesionalisme yang sangat baik
+          dalam setiap tahap pekerjaan. Proyek berjalan tepat waktu dan
+          sesuai standar yang kami harapkan.”
+        </p>
+        <div class="testimonial-author">
+          <strong>Budi Santoso</strong>
+          <span>Project Manager – Manufaktur</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          “Sebagai mitra General Supplier, PT Alsinar Indo Abadi mampu
+          menyediakan kebutuhan material dengan kualitas yang konsisten
+          dan komunikasi yang responsif.”
+        </p>
+        <div class="testimonial-author">
+          <strong>Rina Kurniawati</strong>
+          <span>Procurement Manager – Industri</span>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="testimonial-text">
+          “Kami merasa aman bekerja sama dengan PT Alsinar Indo Abadi
+          karena komitmen mereka terhadap keselamatan kerja dan
+          profesionalisme proyek.”
+        </p>
+        <div class="testimonial-author">
+          <strong>Ahmad Fauzi</strong>
+          <span>Operations Head – Kontraktor</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- ================= TRUST ================= -->
-
-<section class="section trust reveal">
+<section class="section trust">
   <div class="container">
-    <h2>Legalitas & Informasi Perusahaan</h2>
+    <h2 class="center">Legalitas Perusahaan</h2>
 
-    <!-- BADGE -->
-    <div class="trust-badge-wrap">
-      <div class="trust-badge">✔ Verified Company</div>
-    </div>
-
-    <!-- GRID WAJIB -->
     <div class="trust-grid">
-
-      <div class="trust-item">
-        <div class="trust-icon">🏢</div>
-        <strong>Nama Perusahaan</strong>
-        <p>PT Alsinar Indo Abadi</p>
-      </div>
-
-      <div class="trust-item">
-        <div class="trust-icon">🛠️</div>
-        <strong>Bidang Usaha</strong>
+      <div class="trust-item trust-main">
+        <strong>PT ALSINAR INDO ABADI</strong>
         <p>General Supplier & Contractor</p>
       </div>
 
       <div class="trust-item">
-        <div class="trust-icon">📍</div>
-        <strong>Alamat</strong>
-        <p>Indonesia</p>
-      </div>
-
-      <div class="trust-item">
-        <div class="trust-icon">📄</div>
-        <strong>Status Perusahaan</strong>
+        <strong>Status</strong>
         <p>Badan Usaha Resmi (PT)</p>
       </div>
 
       <div class="trust-item">
-        <div class="trust-icon">✉️</div>
         <strong>Email</strong>
         <p>info@alsinar.com</p>
       </div>
 
       <div class="trust-item">
-        <div class="trust-icon">📞</div>
-        <strong>WhatsApp</strong>
-        <p>+62 813-4686-0886</p>
-        <a href="https://maps.google.com/?q=PT+Alsinar+Indo+Abadi"
-           target="_blank"
-           class="btn outline map-btn">
-           📍 Google Maps
-        </a>
+        <strong>Wilayah Operasional</strong>
+        <p>Indonesia</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ================= MAP ================= -->
-<section class="section alt">
-  <div class="container center">
-    <h2>Lokasi Kami</h2>
-    <div class="map-wrapper">
-      <iframe 
-        src="https://www.google.com/maps/embed?pb=ISI_DARI_GOOGLE_MAPS"
-        loading="lazy">
-      </iframe>
-    </div>
-  </div>
+<!-- ================= CTA ================= -->
+<section class="section center">
+  <h2>Siap Menjadi Mitra Bisnis Anda</h2>
+  <p style="margin:14px 0 26px;color:#64748b">
+    Hubungi kami untuk konsultasi dan penawaran terbaik
+  </p>
+  <a href="kontak.html" class="btn">Hubungi Sekarang</a>
 </section>
 
 <!-- ================= FOOTER ================= -->
 <footer>
-  <p>© 2025 PT Alsinar Indo Abadi</p>
-  <p>General Supplier & Contractor</p>
+  © 2025 PT ALSINAR INDO ABADI<br>
+  General Supplier & Contractor
 </footer>
 
 <script src="script.js"></script>
